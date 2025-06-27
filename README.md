@@ -3,7 +3,6 @@
 A simple, clean, and persistent command-line habit tracker built in Python.
 Track your daily habits, build streaks, and never miss a goal again — all from your terminal.
 
----
 
 ## 🚀 Features
 
@@ -14,7 +13,6 @@ Track your daily habits, build streaks, and never miss a goal again — all from
 * ✅ Automatically prevents double-logging for the same day
 * ✅ Clean, modular Python code — easy to maintain and extend
 
----
 
 ## 🖥️ How It Works
 
@@ -26,7 +24,6 @@ Track your daily habits, build streaks, and never miss a goal again — all from
   * If you've already marked it today → it doesn't count again
 * You can view all habits and their current streaks anytime
 
----
 
 ## 📦 Requirements
 
@@ -34,7 +31,6 @@ Track your daily habits, build streaks, and never miss a goal again — all from
 
 All libraries used are part of the Python standard library.
 
----
 
 ## 🛠️ Getting Started
 
@@ -44,7 +40,6 @@ cd Habit-Tracker-CLI
 python habit_tracker.py
 ```
 
----
 
 ## 📸 Demo
 
@@ -61,7 +56,6 @@ Which habit would you like to mark as done? 1
 Habit marked done successfully! Your current streak is 1.
 ```
 
----
 
 ## 🧩 Folder Structure
 
@@ -72,7 +66,6 @@ habit-tracker-cli/
 └── README.md
 ```
 
----
 
 ## 🧠 Future Improvements
 
@@ -81,7 +74,6 @@ habit-tracker-cli/
 * Longest streak tracking
 * Web version using Flask or React
 
----
 
 ## 🡩‍💻 Author
 
