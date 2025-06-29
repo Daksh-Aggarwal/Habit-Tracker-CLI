@@ -10,6 +10,7 @@ Track your daily habits, build streaks, and never miss a goal again — all from
 * ✅ Add new habits
 * ✅ Mark habits as done (with streak logic)
 * ✅ View all habits with current streaks and timestamps
+* ✅ Edit and delete habits as required
 * ✅ Data persistence using JSON
 * ✅ Automatically prevents double-logging for the same day
 * ✅ Clean, modular Python code — easy to maintain and extend
@@ -25,6 +26,7 @@ Track your daily habits, build streaks, and never miss a goal again — all from
   * If you missed days → your streak resets
   * If you've already marked it today → it doesn't count again
 * You can view all habits and their current streaks anytime
+* You can edit and delete any habit anytime
 
 ---
 
@@ -52,7 +54,9 @@ python habit_tracker.py
 1. Add Habit
 2. Mark Habit as Done
 3. View Habits and Streaks
-4. Exit
+4. Edit Habit
+5. Delete Habit
+6. Exit
 
 What habit would you like to store? Drink Water
 Successfully added new habit!
@@ -76,10 +80,8 @@ habit-tracker-cli/
 
 ## 🧠 Future Improvements
 
-* GUI version using `tkinter`
-* Delete / rename habits
 * Longest streak tracking
-* Web version using Flask or React
+* Web version using Flask (in progress)
 
 ---
 

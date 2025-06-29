@@ -79,6 +79,22 @@ def check_streak(index):
     habits[index]["last_done"] = current_time()
     return (f"Habit marked done successfully! Your current streak is {habits[index]['streak']}.")
 
+def edit_habit(index, new_name):
+    if 0 < index <= len(habits):
+        habits[index - 1]['habit_name'] = new_name
+        print("Habit modified successfully!")
+        save_habits()
+    else:
+        print("Habit not found!")
+
+def delete_habit(index):
+    if 0 < index <= len(habits):
+        habits.pop(index - 1)
+        print("Habit deleted successfully!")
+        save_habits()
+    else:
+        print("Habit not found!")
+
 def save_habits():
     """
     Save the current list of habits to 'habits.json'.
@@ -103,12 +119,17 @@ while True:
 1. Add Habit
 2. Mark Habit as Done
 3. View Habits and Streaks
-4. Exit\n
+4. Edit Habit
+5. Delete Habit
+6. Exit\n
 """)
 
     match (user_input):
         case "1":
             input_habit = input("\nWhat habit would you like to store? ").strip()
+            if not input_habit:
+                print("Habit name cannot be empty!")
+                continue
             add_habit(input_habit)
 
         case "2":
@@ -125,6 +146,32 @@ while True:
             view_habits()
 
         case "4":
+            if (len(habits) == 0):
+                print("\nNo habits found!")
+            else:
+                try:
+                    habit_index = int(input("\nWhich habit would you like to edit? (Input the serial number) "))
+                    while True:
+                        new_habit_name = input("\nWhat would you like to rename it to? ").strip()
+                        if not new_habit_name:
+                            print("Habit name cannot be empty!")
+                            continue
+                        edit_habit(habit_index, new_habit_name)
+                        break
+                except (ValueError):
+                    print("Invalid input!")
+
+        case "5":
+            if (len(habits) == 0):
+                print("\nNo habits found!")
+            else:
+                try:
+                    habit_index = int(input("\nWhich habit would you like to delete? (Input the serial number) "))
+                    delete_habit(habit_index)
+                except (ValueError):
+                    print("Invalid input!")
+
+        case "6":
             print("\nSaved and Exited successfully.")
             save_habits()
             exit()
